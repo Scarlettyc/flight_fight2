@@ -274,6 +274,7 @@ var fighter = (function(){
         bgchange(level);
         fighter_init();
         setInterval("shot()",300);
+
     }
 
 
@@ -332,9 +333,7 @@ var fighter = (function(){
         msg_show();
         setTimeout(function(){
             msg_hide();
-            cheat();
             start();
-            joy_stick();
             }, 1500);
     }
     // 设置事件
@@ -380,7 +379,6 @@ var fighter = (function(){
                                 msg_hide();
                                 cheat();
                                 start();
-                                joy_stick();
                             }, 1500);
                         }
                         break;
@@ -1321,7 +1319,7 @@ var fighter = (function(){
             }else{
                 clearInterval(et);
                 is_lock = 0;
-                action();
+                joy_stick();
             }
         }, 30);
     }
