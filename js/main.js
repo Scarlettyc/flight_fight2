@@ -259,6 +259,9 @@ var fighter = (function(){
         reset();
         key_event();
         buttonClicked();
+        document.body.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+        }, false);
     }
 
 
