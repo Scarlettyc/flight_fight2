@@ -15,6 +15,9 @@ body{margin:0px; background:#000000;}
 .board .bgover{background:url('../images/bg.jpg');}
 .board .bgclear{background:url('../images/bg.jpg');}
 
+.board .aspectration{position: relative;height: 0;width: 100%;}
+.board .aspectration[data-ratio="5:8"]{padding-top: 160%}
+
 .board .gameplane .op{width:350px;text-align:center; margin:60px auto;}
 .board .gameplane .op .logo{width:350px; height:200px; text-align:center; background:url('../images/logo.png') no-repeat;}
 .board .gameplane .op .info{width:350px; margin-top:160px; color:#DEDEDE; font-size:17px; font-family:Arial; font-weight:bold; text-align:center;}
