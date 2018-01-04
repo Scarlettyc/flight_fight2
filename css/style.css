@@ -4,7 +4,7 @@ body{margin:0px; background:#000000;}
 
 /*.board .header{height:100px; line-height:100px;	text-align:center; color:#FFFF00; font-size:36px;}*/
 
-.board .gameplane{float:left; position:relative; width:100%; height:640px; margin:0px 0px 0px 0px; border:0px solid #FF9900; display:inline; overflow:hidden;}
+.board .gameplane{float:left; position:relative; width:100%; height:auto; margin:0px 0px 0px 0px; border:0px solid #FF9900; display:inline; overflow:hidden;}
 .board .bg0{background:url('../images/bg.jpg');}
 .board .bg1{background:url('../images/bg.jpg');}
 .board .bg2{background:url('../images/bg.jpg');}
@@ -16,7 +16,7 @@ body{margin:0px; background:#000000;}
 .board .bgclear{background:url('../images/bg.jpg');}
 
 .board .aspectration{position: relative;height: 0;width: 100%;}
-.board .aspectration[data-ratio="5:8"]{padding-top: 160%}
+.board .aspectration{padding-top: 140%}
 
 .board .gameplane .op{width:350px;text-align:center; margin:60px auto;}
 .board .gameplane .op .logo{width:350px; height:200px; text-align:center; background:url('../images/logo.png') no-repeat;}
