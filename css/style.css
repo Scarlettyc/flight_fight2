@@ -1,6 +1,6 @@
 body{margin:0px; background:#000000;}
 
-.board{width:680px;	margin:0px auto;}
+.board{width:0px auto;	margin:0px auto;}
 
 .board .header{height:100px; line-height:100px;	text-align:center; color:#FFFF00; font-size:36px;}
 
@@ -19,6 +19,12 @@ body{margin:0px; background:#000000;}
 .board .gameplane .op .logo{width:350px; height:200px; text-align:center; background:url('../images/logo.png') no-repeat;}
 .board .gameplane .op .info{width:350px; margin-top:160px; color:#DEDEDE; font-size:17px; font-family:Arial; font-weight:bold; text-align:center;}
 .board .gameplane .op .info span{color:#FFFF00;}
+.board .gameplane .score{color:#FFFFFF; font-size:18px; font-family:arial; line-height:30px;}
+.board .gameplane .score p{margin:0px;}
+.board .gameplane .score .fighternum{background:url('../images/fighter_icon.png') no-repeat 2px 2px;}
+.board .gameplane .score .bombnum{background:url('../images/icon.png') no-repeat 2px 6px;}
+.board .gameplane .score .hilite{color:#FFFF00; margin-left:10px;}
+.board .gameplane .score .nor{color:#FFFFFF; margin-left:40px;}
 .board .gameplane .gameover{width:350px; text-align:center; margin:150px auto; display:none;}
 .board .gameplane .gameover .tit{color:#FFFFFF; font-size:36px; font-family:Arial; font-weight:bold; letter-spacing:2px;}
 .board .gameplane .gameover .con{margin:85px auto; line-height:50px; color:#FFFF00; font-size:22px; font-family:Arial;}
@@ -56,7 +62,7 @@ body{margin:0px; background:#000000;}
 .board .gameplane .boss5{width:127px; height:169px; position:absolute; background:url('../images/boss1.png') no-repeat;}
 .board .gameplane .boss6{width:127px; height:169px; position:absolute; background:url('../images/boss1.png') no-repeat;}
 
-.board .sideplane{float:right; width:200px; height:640px; margin:0px 20px 20px 10px; border:2px solid #000000; display:inline;}
+/*.board .sideplane{float:right; width:200px; height:640px; margin:0px 20px 20px 10px; border:2px solid #000000; display:inline;}
 .board .sideplane .score{color:#FFFFFF; font-size:18px; font-family:arial; line-height:40px;}
 .board .sideplane .score p{margin:0px;}
 .board .sideplane .score .fighternum{background:url('../images/fighter_icon.png') no-repeat 0px 11px;}
@@ -78,6 +84,6 @@ body{margin:0px; background:#000000;}
 .board .sideplane .tips .line{height:20px;}
 
 .board .footer{line-height:50px; text-align:center; color:#FFFFFF; font-size:16px;}
-.board .footer .hilite{color:#FFFF00;}
+.board .footer .hilite{color:#FFFF00;}*/
 
 .clear{clear:both; overflow:hidden; height:0px;}

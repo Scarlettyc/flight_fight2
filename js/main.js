@@ -1237,9 +1237,9 @@ var fighter = (function(){
         bgchange('over');
         failtimes++;
         setTimeout(function(){
-            if(failtimes==3){
+            /*if(failtimes==3){
                 alert('在游戏开始画面依次输入 ↑ ↑ ↓ ↓ ← → ← → a s a s，再开始游戏，会有惊喜^_^');
-            }
+            }*/
             bgsound();
             init();
         }, 8000);

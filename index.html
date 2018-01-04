@@ -7,6 +7,21 @@
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script src="js/virtualjoystick.js"></script>
+<script type="text/javascript">  
+    var phoneWidth =  parseInt(window.screen.width);  
+    var phoneScale = phoneWidth/640;  
+    var ua = navigator.userAgent;  
+    if (/Android (\d+\.\d+)/.test(ua)){  
+        var version = parseFloat(RegExp.$1);  
+        if(version>2.3){  
+            document.write(‘<meta name="viewport" content="width=640, minimum-scale = ‘+phoneScale+‘, maximum-scale = ‘+phoneScale+‘, target-densitydpi=device-dpi">‘);  
+        }else{  
+            document.write(‘<meta name="viewport" content="width=640, target-densitydpi=device-dpi">‘);  
+        }  
+    } else {  
+        document.write(‘<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">‘);  
+    }  
+</script>
 </head>
 
 <!-- board start -->
@@ -33,11 +48,19 @@
         <div class="level" id="level"></div>
         <div class="fighter" id="fighter"></div>
         <div class="bomb" id="bomb"></div>
+
+        <div class="score">
+            <p>HI-SCORE:<span class="hilite" id="hiscore">10000</span></p>
+            <p>SCORE:<span class="hilite" id="score">0</span></p>
+            <p class="fighternum"><span class="nor" id="fighternum">3</span></p>
+            <p class="bombnum"><span class="nor" id="bombnum">3</span></p>
+            <p class="clear"></p>
+        </div>
     </div>
     <!-- game plane end -->
 
     <!-- side plane start -->
-    <div class="sideplane">
+    <!--<div class="sideplane">
         <div class="score">
             <p>HI-SCORE:<span class="hilite" id="hiscore">10000</span></p>
             <p>SCORE:<span class="hilite" id="score">0</span></p>
@@ -68,13 +91,13 @@
                 </ul>
             </p>
         </div>
-    </div>
+    </div>-->
     <!-- side plane end -->
 
     <div class="clear"></div>
 
     <!-- footer start -->
-    <div class="footer">Author:<span class="hilite">fdipzone</span> Ver:<span class="hilite">1.0</span></div>
+    <!--<div class="footer">Author:<span class="hilite">fdipzone</span> Ver:<span class="hilite">1.0</span></div>-->
     <!-- footer end -->
 
 </div>
