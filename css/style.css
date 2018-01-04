@@ -2,9 +2,9 @@ body{margin:0px; background:#000000;}
 
 .board{width:0px auto;	margin:0px auto;}
 
-.board .header{height:40px; color:#FFFF00;}
+/*.board .header{height:40px; color:#FFFF00;}*/
 
-.board .gameplane{float:left; position:relative; width:100%; height:auto; margin:0px 0px 0px 0px; border:0px solid #FF9900; display:inline; overflow:hidden;}
+.board .gameplane{float:left; position:relative; width:100%; height:auto; margin:10px 0px 0px 0px; border:0px solid #FF9900; display:inline; overflow:hidden;}
 .board .bg0{background:url('../images/bg.jpg');}
 .board .bg1{background:url('../images/bg.jpg');}
 .board .bg2{background:url('../images/bg.jpg');}
