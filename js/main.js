@@ -16,7 +16,8 @@ window.onload = function(){
         'images/bullet.png', 
         'images/gift.png', 
         'images/bomb.png', 
-        'images/boss1.png'];
+        'images/boss1.png',
+        'images/button.png'];
 
     var callback = function(){
         var gameplane = $('gameplane');
@@ -1258,7 +1259,7 @@ var fighter = (function(){
                 var shotting1 = window.setInterval("shot()",300);
                 bgsound();
                 init();
-            }, 5000);
+            }, 3000);
         }  
     }
 

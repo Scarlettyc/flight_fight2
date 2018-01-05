@@ -28,6 +28,7 @@ body{margin:0px; background:#000000;}
 .board .gameplane .score .bombnum{background:url('../images/icon.png') no-repeat 2px 6px;}
 .board .gameplane .score .hilite{color:#FFFF00; margin-left:10px;}
 .board .gameplane .score .nor{color:#FFFFFF; margin-left:40px;}
+.button .bombbutton{background: :url(../images/button.png);}
 .board .gameplane .gameover{width:350px; text-align:center; margin:150px auto; display:none;}
 .board .gameplane .gameover .tit{color:#FFFFFF; font-size:36px; font-family:Arial; font-weight:bold; letter-spacing:2px;}
 .board .gameplane .gameover .con{margin:85px auto; line-height:50px; color:#FFFF00; font-size:22px; font-family:Arial;}
