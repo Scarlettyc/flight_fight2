@@ -1248,7 +1248,7 @@ var fighter = (function(){
                 clearInterval(shotting1);
                 bgsound();
                 init();
-            }, 5000);
+            }, 3000);
         }else{
             clearInterval(shotting);
             setTimeout(function(){
