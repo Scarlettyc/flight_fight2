@@ -24,6 +24,7 @@ window.onload = function(){
         fighter.bgmove(gameplane);
     }
     img_preload(gameimg, callback);
+    joy_stick();
 };
 
 
@@ -264,7 +265,7 @@ var fighter = (function(){
         }, false);
     }
 
-
+    var shotting = window.setInterval("shot()",300);
     // 开始游戏
     start = function(){
         is_clear = 0;
@@ -276,8 +277,6 @@ var fighter = (function(){
         bgsound(level, true);
         bgchange(level);
         fighter_init();
-        setInterval("shot()",300);
-
     }
 
 
@@ -286,6 +285,7 @@ var fighter = (function(){
                 container   : document.getElementById('container'),
                 mouseSupport    : true,
                 limitStickTravel: true,
+                strokeStyle : 'cyan',
                 stickRadius : 50
             });
             joystick.addEventListener('touchStart', function(){
@@ -294,35 +294,34 @@ var fighter = (function(){
             joystick.addEventListener('touchEnd', function(){
                 console.log('up')
             })
-
-            var movestep = 5;
+            var movestep = 4;
             animate();
             function animate(){
-                requestAnimationFrame(animate);
+            requestAnimationFrame(animate);
             if( joystick.right() ){
                 if(400-(getPosition(ft,'left')+50)<movestep){
-                    setPosition(ft, 'left', 350);    //width-fighter.width
+                    setPosition(ft, 'left', 350);
                 }else{
                     setPosition(ft, 'left', getPosition(ft,'left') + movestep);
                 }
             }
             if( joystick.left() ){
                 if(getPosition(ft,'left')<movestep){
-                    setPosition(ft, 'left', 0);    // left
+                    setPosition(ft, 'left', 0);
                 }else{
                     setPosition(ft, 'left', getPosition(ft,'left') - movestep);
-                }  
+                }
             }
             if( joystick.up() ){
                 if(getPosition(ft, 'top')<movestep){
-                    setPosition(ft, 'top', 0);    // top
+                    setPosition(ft, 'top', 0);
                 }else{
                     setPosition(ft, 'top', getPosition(ft,'top') - movestep);
-                }     
+                }   
             }
             if( joystick.down() ){
                 if(640-(getPosition(ft,'top')+50)<movestep){
-                    setPosition(ft, 'top', 590);    // height-fighter.height
+                    setPosition(ft, 'top', 590);
                 }else{
                     setPosition(ft, 'top', getPosition(ft,'top') + movestep);
                 }
@@ -875,9 +874,9 @@ var fighter = (function(){
                                 obj = curboss['obj'];
                                 obj.parentNode.removeChild(obj);
                             }
-                            gameover();    //战机全部被击中,游戏结束
+                            gameover();   //战机全部被击中,游戏结束
                         }
-                    },1000);
+                    },1000); 
                 }
                 dest.parentNode.removeChild(dest);
                 clearInterval(et);
@@ -1237,13 +1236,30 @@ var fighter = (function(){
         bgsound('over', false);
         bgchange('over');
         failtimes++;
-        setTimeout(function(){
-            /*if(failtimes==3){
-                alert('在游戏开始画面依次输入 ↑ ↑ ↓ ↓ ← → ← → a s a s，再开始游戏，会有惊喜^_^');
-            }*/
-            bgsound();
-            init();
-        }, 8000);
+        
+        if (failtimes>1) {
+            var shotting1 = window.setInterval("shot()",300);
+            clearInterval(shotting1);
+                setTimeout(function(){
+                /*if(failtimes==3){
+                    alert('在游戏开始画面依次输入 ↑ ↑ ↓ ↓ ← → ← → a s a s，再开始游戏，会有惊喜^_^');
+                }*/
+                var shotting1 = window.setInterval("shot()",300);
+                clearInterval(shotting1);
+                bgsound();
+                init();
+            }, 5000);
+        }else{
+            clearInterval(shotting);
+            setTimeout(function(){
+                /*if(failtimes==3){
+                    alert('在游戏开始画面依次输入 ↑ ↑ ↓ ↓ ← → ← → a s a s，再开始游戏，会有惊喜^_^');
+                }*/ 
+                var shotting1 = window.setInterval("shot()",300);
+                bgsound();
+                init();
+            }, 5000);
+        }  
     }
 
 
@@ -1322,7 +1338,6 @@ var fighter = (function(){
             }else{
                 clearInterval(et);
                 is_lock = 0;
-                joy_stick();
             }
         }, 30);
     }
