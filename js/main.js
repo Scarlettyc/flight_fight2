@@ -686,7 +686,7 @@ var fighter = (function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'top', getPosition(enft,'top')+Math.abs(step));
                         setPosition(enft, 'left', getPosition(enft,'left')+step);
-                        count<5? count++ : (count=0, step*=-1);
+                        count<15? count++ : (count=0, step*=-1);
                         if(getPosition(enft, 'top')>640 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
@@ -703,7 +703,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'left', getPosition(enft,'left')+step);
-                        count<9? count++ : (count=0, attack(enft,1,17,47));
+                        count<25? count++ : (count=0, attack(enft,1,17,47));
                         if(getPosition(enft,'left')>400 && step>0 || getPosition(enft,'left')<-50 && step<0 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
@@ -720,7 +720,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'top', getPosition(enft,'top')+step);
-                        count<9? count++ : (count=0, attack(enft,1,17,47));
+                        count<25? count++ : (count=0, attack(enft,1,17,47));
                         if(getPosition(enft,'top')>640 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
@@ -737,7 +737,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'left', getPosition(enft,'left')+step);
-                        count<10? count++ : (count=0, attack(enft,4,17,31));
+                        count<25? count++ : (count=0, attack(enft,4,17,31));
                         
                         if(getPosition(enft,'left')>=350 && step>0 || getPosition(enft,'left')<=0 && step<0){
                             step*=-1;
@@ -759,7 +759,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'top', getPosition(enft,'top')+step);
-                        count<9? count++ : (count=0, attack(enft,1,17,-17));
+                        count<25? count++ : (count=0, attack(enft,1,17,-17));
                         if(getPosition(enft,'top')<-32 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
@@ -979,14 +979,14 @@ var fighter = (function(){
                 var dpoint = {x:getPosition(ft,'left')+25, y:getPosition(ft,'top')+25};
                 var p = vector(opoint, dpoint, 8);
 
-                enftbullet('bullet', oleft, otop, p[0], p[1], 35);
+                enftbullet('bullet', oleft, otop, p[0], p[1], 75);
                 break;
 
             case 2: //直线攻击
                 var num = 3;
                 var st = setInterval(function(){
                     if(num>0){
-                        enftbullet('bullet', oleft, otop, 0, 8, 35);
+                        enftbullet('bullet', oleft, otop, 0, 8, 75);
                         num --;
 
                     }else{
@@ -1001,15 +1001,15 @@ var fighter = (function(){
                     if(num>0){
                         switch(num){
                             case 1:
-                                enftbullet('sbullet', oleft, otop, 0, 8, 35);
+                                enftbullet('sbullet', oleft, otop, 0, 8, 75);
                                 break;
 
                             case 2:
-                                enftbullet('sbullet', oleft, otop, 3, 8, 35);
+                                enftbullet('sbullet', oleft, otop, 3, 8, 75);
                                 break;
 
                             case 3:
-                                enftbullet('sbullet', oleft, otop, -3, 8, 35);
+                                enftbullet('sbullet', oleft, otop, -3, 8, 75);
                                 break;
                         }
 
@@ -1027,15 +1027,15 @@ var fighter = (function(){
                     if(num>0){
                         switch(num){
                             case 1:
-                                enftbullet('bullet', oleft, otop, 0, 8, 35);
+                                enftbullet('bullet', oleft, otop, 0, 8, 75);
                                 break;
 
                             case 2:
-                                enftbullet('bullet', oleft, otop, 3, 8, 35);
+                                enftbullet('bullet', oleft, otop, 3, 8, 75);
                                 break;
 
                             case 3:
-                                enftbullet('bullet', oleft, otop, -3, 8, 35);
+                                enftbullet('bullet', oleft, otop, -3, 8, 75);
                                 break;
                         }
 
@@ -1242,9 +1242,6 @@ var fighter = (function(){
             var shotting1 = window.setInterval("shot()",300);
             clearInterval(shotting1);
                 setTimeout(function(){
-                /*if(failtimes==3){
-                    alert('在游戏开始画面依次输入 ↑ ↑ ↓ ↓ ← → ← → a s a s，再开始游戏，会有惊喜^_^');
-                }*/
                 var shotting1 = window.setInterval("shot()",300);
                 clearInterval(shotting1);
                 bgsound();
@@ -1252,10 +1249,7 @@ var fighter = (function(){
             }, 3000);
         }else{
             clearInterval(shotting);
-            setTimeout(function(){
-                /*if(failtimes==3){
-                    alert('在游戏开始画面依次输入 ↑ ↑ ↓ ↓ ← → ← → a s a s，再开始游戏，会有惊喜^_^');
-                }*/ 
+            setTimeout(function(){ 
                 var shotting1 = window.setInterval("shot()",300);
                 bgsound();
                 init();
