@@ -4,7 +4,7 @@ body{margin:0px; background:#000000;}
 
 /*.board .header{height:40px; color:#FFFF00;}*/
 
-.board .gameplane{float: left; position:relative; width:100%; height:100%; margin:0px 0px 0px 0px; border:0px solid #FF9900; display:inline; overflow:hidden;}
+.board .gameplane{float: left; position:relative; width:400px; height:640px; margin:0px 0px 0px 0px; border:0px solid #FF9900; display:inline; overflow:hidden;}
 .board .bg0{background:url('../images/bg.jpg');}
 .board .bg1{background:url('../images/bg.jpg');}
 .board .bg2{background:url('../images/bg.jpg');}

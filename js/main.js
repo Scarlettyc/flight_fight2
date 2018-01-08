@@ -686,7 +686,7 @@ var fighter = (function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'top', getPosition(enft,'top')+Math.abs(step));
                         setPosition(enft, 'left', getPosition(enft,'left')+step);
-                        count<15? count++ : (count=0, step*=-1);
+                        count<5? count++ : (count=0, step*=-1);
                         if(getPosition(enft, 'top')>640 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
