@@ -32,7 +32,7 @@ window.onload = function(){
 /** fighter class */
 var fighter = (function(){
     
-    var hiscore = 10000;                    // 最高分
+    var hiscore = 0;                    // 最高分
     var score = 0;                          // 当前分
     var fighternum = 17;                     // 战机数量
     var bombnum = 3;                        // 炸弹数量
@@ -287,7 +287,7 @@ var fighter = (function(){
                 mouseSupport    : true,
                 limitStickTravel: true,
                 strokeStyle : 'transparent',
-                stickRadius : 20
+                stickRadius : 50
             });
             joystick.addEventListener('touchStart', function(){
                 console.log('down')
