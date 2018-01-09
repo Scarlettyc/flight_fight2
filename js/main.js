@@ -286,8 +286,8 @@ var fighter = (function(){
                 container   : document.getElementById('container'),
                 mouseSupport    : true,
                 limitStickTravel: true,
-                strokeStyle : 'cyan',
-                stickRadius : 50
+                strokeStyle : 'transparent',
+                stickRadius : 20
             });
             joystick.addEventListener('touchStart', function(){
                 console.log('down')
