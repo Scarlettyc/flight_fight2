@@ -295,7 +295,7 @@ var fighter = (function(){
             joystick.addEventListener('touchEnd', function(){
                 console.log('up')
             })
-            var movestep = 3;
+            var movestep = 4;
             animate();
             function animate(){
             requestAnimationFrame(animate);
