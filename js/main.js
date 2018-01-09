@@ -34,7 +34,7 @@ var fighter = (function(){
     
     var hiscore = 10000;                    // 最高分
     var score = 0;                          // 当前分
-    var fighternum = 3;                     // 战机数量
+    var fighternum = 17;                     // 战机数量
     var bombnum = 3;                        // 炸弹数量
     var ft = null;                          // 战机对象
     var is_start = 0;                       // 是否已开始游戏
@@ -910,7 +910,10 @@ var fighter = (function(){
                     if(getPosition(bossft,'top')<50){    // boss 进场
                         setPosition(bossft, 'top', getPosition(bossft, 'top')+5);
                     }else{
-
+                        if (fighternum == 0) {
+                            clearInterval(et);
+                            destroyboss();
+                        }
                         if(curboss['armor']<=0){    // boss over
                             clearInterval(et);
                             bossover();
@@ -1071,7 +1074,6 @@ var fighter = (function(){
                 clearInterval(et);
                 ft.parentNode.removeChild(bullet);
             }
-
             impact_handle(bullet, et);
         }, speed);
     }
@@ -1102,6 +1104,13 @@ var fighter = (function(){
             }
             step++;
         }, 50);
+    }
+
+    destroyboss = function(){
+        var dest = document.createElement('div');
+        setClass(dest, 'destroyboss');
+        ft.parentNode.appendChild(dest);
+        dest.parentNode.removeChild(dest);
     }
 
 
@@ -1236,8 +1245,8 @@ var fighter = (function(){
         setHtml('overcon', 'LEVEL : ' + level + '<br>' + 'SCORE : ' + score);
         bgsound('over', false);
         bgchange('over');
-        failtimes++;
-        
+
+        failtimes++;   
         if (failtimes>1) {
             var shotting1 = window.setInterval("shot()",300);
             clearInterval(shotting1);
@@ -1286,7 +1295,7 @@ var fighter = (function(){
         keypriority = {};
         enemydata = [];
         score = 0;
-        fighternum = 3;
+        fighternum = 17;
         bombnum = 3;
 
         setHtml('hiscore', hiscore);
