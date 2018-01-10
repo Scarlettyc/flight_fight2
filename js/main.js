@@ -35,10 +35,10 @@ var fighter = (function(){
     var hiscore = 0;                    // 最高分
     var score = 0;                          // 当前分
     var fighternum = 5;                     // 战机数量
-    var bombnum = 3;                        // 炸弹数量
+    //var bombnum = 3;                        // 炸弹数量
     var ft = null;                          // 战机对象
     var is_start = 0;                       // 是否已开始游戏
-    var is_bombing = 0;                     // 是否爆炸中
+    //var is_bombing = 0;                     // 是否爆炸中
     var is_lock = 1;                        // 是否锁定
     var is_over = 0;                        // 是否已结束
     var is_clear = 0;                       // 清屏
@@ -578,7 +578,7 @@ var fighter = (function(){
 
 
     // 放炸弹
-    bomb = function(){
+    /*bomb = function(){
         if(is_bombing==0 && bombnum>0){    // 不是爆炸中且有炸弹数
             is_bombing = 1;
             bombnum --;
@@ -609,7 +609,7 @@ var fighter = (function(){
                 step ++;
             }, 70);
         }
-    }
+    }*/
 
 
     // 游戏进程
@@ -796,7 +796,7 @@ var fighter = (function(){
                 }, 80);
                 break;
 
-            case 12: // bomb gift
+            /*case 12: // bomb gift
                 var count = 0;
                 et = setInterval(function(){
                     if(node_exist(enft)){
@@ -816,7 +816,7 @@ var fighter = (function(){
                         clearInterval(et);
                     }
                 }, 80);
-                break;
+                break;*/
 
             case 13: // fighter gift
                 var count = 0;
@@ -854,10 +854,10 @@ var fighter = (function(){
         if(dobj.id=='fighter'){    // 战机被击中
             disp(dobj.id, 'hide');
             power = 1;
-            bombnum = 3;
+            //bombnum = 3;
             fighternum--;
             setHtml('fighternum', fighternum);
-            setHtml('bombnum', bombnum);
+            //setHtml('bombnum', bombnum);
             is_lock = 1;
         }else{
             dobj.parentNode.removeChild(dobj);
@@ -1183,10 +1183,10 @@ var fighter = (function(){
 
 
     // 炸弹增加
-    bombup = function(){
+    /*bombup = function(){
         bombnum ++;
         setHtml('bombnum', bombnum);
-    }
+    }*/
 
 
     // 战机增加
@@ -1287,7 +1287,7 @@ var fighter = (function(){
     // 重置
     reset = function(){
         is_start = 0;
-        is_bombing = 0;
+        //is_bombing = 0;
         is_lock = 1;
         is_over = 0;
         is_clear = 0;
@@ -1299,12 +1299,12 @@ var fighter = (function(){
         enemydata = [];
         score = 0;
         fighternum = 5;
-        bombnum = 3;
+        //bombnum = 3;
 
         setHtml('hiscore', hiscore);
         setHtml('score', score);
         setHtml('fighternum', fighternum);
-        setHtml('bombnum', bombnum);
+        //setHtml('bombnum', bombnum);
 
         reset_fighter();
         reset_pile();

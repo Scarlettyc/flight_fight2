@@ -25,7 +25,7 @@ body{margin:0px; background:#000000;}
 .board .gameplane .score{color:#FFFFFF; font-size:18px; font-family:arial; line-height:30px;}
 .board .gameplane .score p{margin:0px;}
 .board .gameplane .score .fighternum{background:url('../images/fighter_icon.png') no-repeat 2px 2px;}
-.board .gameplane .score .bombnum{background:url('../images/icon.png') no-repeat 2px 6px;}
+/*.board .gameplane .score .bombnum{background:url('../images/icon.png') no-repeat 2px 6px;}*/
 .board .gameplane .score .hilite{color:#FFFF00; margin-left:10px;}
 .board .gameplane .score .nor{color:#FFFFFF; margin-left:40px;}
 .button .bombbutton{background: :url(../images/button.png);}
