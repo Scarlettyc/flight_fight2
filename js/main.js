@@ -703,7 +703,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'left', getPosition(enft,'left')+step);
-                        count<35? count++ : (count=0, attack(enft,1,17,47));
+                        count<30? count++ : (count=0, attack(enft,1,17,47));
                         if(getPosition(enft,'left')>400 && step>0 || getPosition(enft,'left')<-50 && step<0 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
@@ -720,7 +720,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'top', getPosition(enft,'top')+step);
-                        count<35? count++ : (count=0, attack(enft,1,17,47));
+                        count<30? count++ : (count=0, attack(enft,1,17,47));
                         if(getPosition(enft,'top')>640 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
@@ -737,7 +737,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'left', getPosition(enft,'left')+step);
-                        count<35? count++ : (count=0, attack(enft,4,17,31));
+                        count<30? count++ : (count=0, attack(enft,4,17,31));
                         
                         if(getPosition(enft,'left')>=350 && step>0 || getPosition(enft,'left')<=0 && step<0){
                             step*=-1;
@@ -759,7 +759,7 @@ var fighter = (function(){
                 et = setInterval(function(){
                     if(node_exist(enft)){
                         setPosition(enft, 'top', getPosition(enft,'top')+step);
-                        count<35? count++ : (count=0, attack(enft,1,17,-17));
+                        count<30? count++ : (count=0, attack(enft,1,17,-17));
                         if(getPosition(enft,'top')<-32 || is_over==1 || is_clear==1){
                             clearInterval(et);
                             ft.parentNode.removeChild(enft);
