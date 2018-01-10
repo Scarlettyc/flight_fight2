@@ -34,7 +34,7 @@ var fighter = (function(){
     
     var hiscore = 0;                    // 最高分
     var score = 0;                          // 当前分
-    var fighternum = 17;                     // 战机数量
+    var fighternum = 5;                     // 战机数量
     var bombnum = 3;                        // 炸弹数量
     var ft = null;                          // 战机对象
     var is_start = 0;                       // 是否已开始游戏
@@ -286,8 +286,11 @@ var fighter = (function(){
                 container   : document.getElementById('container'),
                 mouseSupport    : true,
                 limitStickTravel: true,
-                strokeStyle : 'transparent',
-                stickRadius : 50
+                strokeStyle : 'cyan',
+                stickRadius : 30,
+                stationaryBase :true,
+                baseX : 70,
+                baseY : 580
             });
             joystick.addEventListener('touchStart', function(){
                 console.log('down')
@@ -1295,7 +1298,7 @@ var fighter = (function(){
         keypriority = {};
         enemydata = [];
         score = 0;
-        fighternum = 17;
+        fighternum = 5;
         bombnum = 3;
 
         setHtml('hiscore', hiscore);
