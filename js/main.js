@@ -34,7 +34,7 @@ var fighter = (function(){
     
     var hiscore = 0;                    // 最高分
     var score = 0;                          // 当前分
-    var fighternum = 5;                     // 战机数量
+    var fighternum = 10;                     // 战机数量
     //var bombnum = 3;                        // 炸弹数量
     var ft = null;                          // 战机对象
     var is_start = 0;                       // 是否已开始游戏
@@ -1295,7 +1295,7 @@ var fighter = (function(){
         keypriority = {};
         enemydata = [];
         score = 0;
-        fighternum = 5;
+        fighternum = 10;
         //bombnum = 3;
 
         setHtml('hiscore', hiscore);
